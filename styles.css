@@ -9,9 +9,9 @@
     --bg-cta-200: #ffaf1a;
 
 
-    --font-family-heading: 'Playfair Display', serif;
-    --font-family-heading-other: 'Prata', serif;
-    --font-family-body: 'Roboto', sans-serif;
+    --font-family-heading: 'Roboto', sans-serif;
+    --font-family-heading-other: 'Archivo', sans-serif;
+    --font-family-body: 'Playfair Display', serif;
 
     --font-weight-thin: 200;
     --font-weight-regular: 400;
@@ -29,4 +29,104 @@
 html {
     font-size: 100%;  /* 16px */
     scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: var(--font-family-body);
+    font-weight: var(--font-weight-regular);
+    background-color: var(--background);
+    position: relative;
+    padding-bottom: 5rem;
+}
+
+h1, h2, h3, h4, h5 {
+    font-family: var(--font-family-heading-other);
+    font-weight: var(--font-weight-bold);
+  }
+
+h1, h2 {
+    line-height: 1.2;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+h1 {
+    font-size: var(--font-size-900);
+}
+
+h2 {
+    font-size: var(--font-size-800); 
+    text-decoration: underline;
+}
+
+h3 {
+    font-size: var(--font-size-700);
+}
+
+h4 {
+    font-size: var(--font-size-600); 
+    text-align: center;
+}
+
+h5 {
+    font-size: var(--font-size-500); 
+}
+
+small {
+    font-size: var(--font-size-300); 
+}
+
+p {
+    line-height: 1.6;
+}
+
+
+
+
+.main-header {
+    max-width: 1600px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.brand-label {
+    display: flex;
+    align-items:center;
+    gap: .5em;
+}
+
+.brand-label p {
+    font-size: var(--font-size-600);
+}
+
+.logo-container {
+    height: 50px;
+}
+
+.reliance-logo {
+    height: 100%;
+}
+
+.navigation-list {
+    list-style-type: none;
+    display: flex;
+    gap: 2em;
+}
+
+.navigation-list li a {
+    color: hsl(0, 0%, 27%);
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.navigation-list li a:hover {
+    color: black;
+    border-bottom: 1px solid black;
+}
+
+.active-page {
+    text-decoration: underline;
 }
