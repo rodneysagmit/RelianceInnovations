@@ -36,9 +36,10 @@ body {
     font-family: var(--font-family-body);
     font-weight: var(--font-weight-regular);
     background-color: var(--background);
-    position: relative;
-    padding-bottom: 5rem;
+}
 
+main {
+    margin-bottom: 5em;
 }
 
 h1, h2, h3, h4, h5 {
@@ -94,7 +95,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-
+    text-align: center;
 }
 
 .brand-label {
@@ -134,7 +135,7 @@ header {
 
 .hero-section {
     background-image: url();
-    background-color: #cccccc;
+    background-color: #eeeeee;
     background-repeat: no-repeat;
     background-position: center; 
     background-size: cover;
@@ -173,27 +174,106 @@ header {
 .wrapper {
     max-width: 1440px;
     margin: auto;
+    padding: 1em;
 }
 
 
 
 
+.list {
+    display: flex;
+    list-style: none;
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+  }
+  
+  .item {
+    flex-shrink: 0;
+    height: 50vh;
+    background-color: #FFF;
+    scroll-snap-align: center;
+  }
+  
+  .content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+
+  }
+
+  .list {
+    /* Hide scrollbar in Firefox */
+    scrollbar-width: none;
+  
+    /* Hide scrollbar in IE and Edge */
+    -ms-overflow-style: none;
+  }
+  
+  /* Hide scrollbar in webkit */
+  .list::-webkit-scrollbar {
+    display: none;
+  }
 
 
 
 
 footer {
-    position: absolute;
+    background-color: #eeeeee;
     margin: 0;
     bottom: 0;
-    height: 5rem; 
+    min-height: 10rem; 
     width: 100%;
 }
 
 .footer-content {
-    text-align: center;
+    max-width: 1600px;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
 }
 
+.footer-sitemap {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-nav {
+    list-style-type: none;
+    text-align: left;
+}
+
+.footer-nav li a {
+    color: hsl(0, 0%, 0%);
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.footer-nav li a:hover {
+    color: black;
+    border-bottom: 1px solid black;
+}
+
+.footer-legal {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-social {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
 
 /* MOBILE MEDIA QUERIES */
 @media (max-width:31.25em) {
