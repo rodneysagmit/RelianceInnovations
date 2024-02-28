@@ -1,5 +1,5 @@
 :root {
-    --text: hsl(0, 0%, 0%);
+    --text: #050315;
     --background: hsl(0, 0%, 100%);
 
     --bg-primary: #0A1723;
@@ -38,17 +38,20 @@ body {
     background-color: var(--background);
     position: relative;
     padding-bottom: 5rem;
+
 }
 
 h1, h2, h3, h4, h5 {
     font-family: var(--font-family-heading-other);
-    font-weight: var(--font-weight-bold);
+    font-weight: var(--font-weight-regular);
+
   }
 
 h1, h2 {
     line-height: 1.2;
     text-transform: uppercase;
     text-align: center;
+    margin: 0;
 }
 
 h1 {
@@ -81,8 +84,9 @@ p {
     line-height: 1.6;
 }
 
-
-
+header {
+    position:static;
+}
 
 .main-header {
     max-width: 1600px;
@@ -90,6 +94,7 @@ p {
     display: flex;
     justify-content: space-between;
     align-items: center;
+
 }
 
 .brand-label {
@@ -117,7 +122,7 @@ p {
 }
 
 .navigation-list li a {
-    color: hsl(0, 0%, 27%);
+    color: hsl(0, 0%, 0%);
     text-decoration: none;
     text-transform: uppercase;
 }
@@ -127,6 +132,90 @@ p {
     border-bottom: 1px solid black;
 }
 
-.active-page {
-    text-decoration: underline;
+.hero-section {
+    background-image: url();
+    background-color: #cccccc;
+    background-repeat: no-repeat;
+    background-position: center; 
+    background-size: cover;
 }
+
+.hero-content {
+    height: 80vh;
+    max-width: 1440px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.button {
+    background-color: #f1f1fe;
+    font-family: var(--font-family-heading-other);
+    font-weight: var(--font-weight-regular);
+    font-size: var(--font-size-500); 
+    border: none;
+    text-align: center;
+    padding: .7em;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: var(--bg-primary);
+    border-radius: 1.2em;
+    margin: .2em;
+}
+
+.button:hover, .button:focus-visible {
+    background-color: #DEDCFF;
+
+}
+
+.wrapper {
+    max-width: 1440px;
+    margin: auto;
+}
+
+
+
+
+
+
+
+
+footer {
+    position: absolute;
+    margin: 0;
+    bottom: 0;
+    height: 5rem; 
+    width: 100%;
+}
+
+.footer-content {
+    text-align: center;
+}
+
+
+/* MOBILE MEDIA QUERIES */
+@media (max-width:31.25em) {
+    :root {
+        --font-size-300: 1rem; /* 16.00px */
+        --font-size-400: 1.125rem;  /* 18.00px */
+        --font-size-500: 1.266rem; /* 20.25px */
+        --font-size-600: 1.424rem; /* 22.78px */
+        --font-size-700: 1.602rem; /* 35.63px */
+        --font-size-800: 1.802rem; /* 28.83px */
+        --font-size-900: 2.027rem; /* 32.44px */
+    }
+}	
+
+@media (max-width:50em) and (min-width:31.25em) {
+    :root {
+        --font-size-300: 0.8rem; /* 12.80px */
+        --font-size-400: 1rem;  /* 16px */
+        --font-size-500: 1.25rem; /* 20.00px */
+        --font-size-600: 1.563rem; /* 25.00px */
+        --font-size-700: 1.953rem; /* 31.25px */
+        --font-size-800: 2.441rem; /* 39.06px */
+        --font-size-900: 3.052rem; /* 48.83px */
+    }
+} 
