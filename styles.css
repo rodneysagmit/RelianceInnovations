@@ -276,7 +276,7 @@ footer {
 .footer-nav li a {
     color: hsl(0, 0%, 0%);
     text-decoration: none;
-    text-transform: uppercase;
+
 }
 
 .footer-nav li a:hover {
@@ -291,6 +291,16 @@ footer {
     justify-content: center;
     align-items: center;
     margin: auto;
+}
+
+.footer-legal a {
+    color: hsl(0, 0%, 0%);
+    text-decoration: none;
+}
+
+.footer-legal a:hover {
+    color: black;
+    border-bottom: 1px solid black;
 }
 
 .footer-social {
