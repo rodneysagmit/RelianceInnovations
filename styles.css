@@ -1,17 +1,23 @@
+@font-face {
+    font-family: 'calgary';
+    src: URL('assets/Calgary_DEMO.ttf') format('truetype');
+  }
+
 :root {
-    --text: #050315;
+    --text: #432616;
     --background: hsl(0, 0%, 100%);
 
-    --bg-primary: #0A1723;
-    --bg-secondary: #d3d3de;
-    --bg-accent: #638382;
-    --bg-cta: #9F8E58;
-    --bg-cta-200: #ffaf1a;
+    --bg-primary: #2E4412;
+    --bg-secondary: #f6c500;
+    --bg-accent: #d4d6d0;
+    --bg-cta: #f78c56;
+    --bg-cta-200: #f9ebcd;
+    --bg-accent-secondary: #432616;
 
 
-    --font-family-heading: 'Roboto', sans-serif;
-    --font-family-heading-other: 'Archivo', sans-serif;
-    --font-family-body: 'Playfair Display', serif;
+    --font-family-heading: 'roboto', sans-serif;
+    --font-family-heading-other: 'archivo', sans-serif;
+    --font-family-body: 'archivo', sans-serif;
 
     --font-weight-thin: 200;
     --font-weight-regular: 400;
@@ -50,13 +56,15 @@ h1, h2, h3, h4, h5 {
 
 h1, h2 {
     line-height: 1.2;
-    text-transform: uppercase;
     text-align: center;
     margin: 0;
+    color: var(--bg-accent-secondary);
 }
 
 h1 {
     font-size: var(--font-size-900);
+    font-family: calgary;
+    font-weight: var(--font-weight-bold);
 }
 
 h2 {
@@ -75,6 +83,7 @@ h4 {
 
 h5 {
     font-size: var(--font-size-500); 
+    color: var(--text);
 }
 
 small {
@@ -83,10 +92,11 @@ small {
 
 p {
     line-height: 1.6;
+
 }
 
 header {
-    position:static;
+    background-color: var(--bg-cta-200);
 }
 
 .visually-hidden {
@@ -113,6 +123,8 @@ header {
     justify-content: space-between;
     align-items: center;
     text-align: center;
+    padding: 0 50px 0 50px;
+
 }
 
 .brand-label {
@@ -131,6 +143,11 @@ header {
 
 .reliance-logo {
     height: 100%;
+}
+
+.logo-label {
+    font-family: calgary;
+    font-weight: var(--font-weight-bold);
 }
 
 .navigation-list {
@@ -152,7 +169,8 @@ header {
 
 .hero-section {
     background-image: url();
-    background-color: #eeeeee;
+    background-color: var(--bg-cta-200);
+
     background-repeat: no-repeat;
     background-position: center; 
     background-size: cover;
@@ -171,23 +189,35 @@ header {
 }
 
 .button {
-    background-color: #f1f1fe;
+    background-color: var(--bg-secondary);
     font-family: var(--font-family-heading-other);
     font-weight: var(--font-weight-regular);
     font-size: var(--font-size-500); 
     border: none;
     text-align: center;
     padding: .7em;
-    text-transform: uppercase;
     text-decoration: none;
-    color: var(--bg-primary);
+    color: var(--text);
     border-radius: 1.2em;
     margin: .2em;
 }
 
-.button:hover, .button:focus-visible {
-    background-color: #DEDCFF;
+.button-2 {
+    background-color: var(--bg-cta);
+    font-family: var(--font-family-heading-other);
+    font-weight: var(--font-weight-regular);
+    font-size: var(--font-size-500); 
+    border: none;
+    text-align: center;
+    padding: .7em;
+    text-decoration: none;
+    color: var(--text);
+    border-radius: 1.2em;
+    margin: .2em;
+}
 
+.button:hover, .button:focus-visible, .button-2:hover, .button-2:focus-visible  {
+    background-color: var();
 }
 
 .wrapper {
@@ -241,9 +271,18 @@ header {
 
 
 
+  .cta-section {
+    align-items: center; 
+    text-align: center;   
+
+  }
+
+  .services-section {
+    background-color: var(--bg-cta-200);
+  }
 
 footer {
-    background-color: #eeeeee;
+    background-color: var(--bg-accent);
     margin: 0;
     bottom: 0;
     min-height: 10rem; 
