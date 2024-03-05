@@ -58,13 +58,14 @@ h1, h2 {
     line-height: 1.2;
     text-align: center;
     margin: 0;
-    color: var(--bg-accent-secondary);
+
 }
 
 h1 {
     font-size: var(--font-size-900);
     font-family: calgary;
     font-weight: var(--font-weight-bold);
+    color: var(--text);
 }
 
 h2 {
@@ -96,7 +97,9 @@ p {
 }
 
 header {
-    background-color: var(--bg-cta-200);
+    background-color: var(--background);
+    border-bottom:solid var(--text);
+
 }
 
 .visually-hidden {
@@ -168,24 +171,45 @@ header {
 }
 
 .hero-section {
-    background-image: url();
+    min-height: 80vh;
     background-color: var(--bg-cta-200);
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    align-items: center;
+    border-bottom:solid var(--text);
+}
 
-    background-repeat: no-repeat;
-    background-position: center; 
-    background-size: cover;
+.hero-image {
+    max-width: 500px;
+    border-radius: 1em;
+    overflow: hidden;
+    margin: 2em;
+}
+
+.image {
+    width: 100%;
 }
 
 .hero-content {
-    height: 80vh;
-    max-width: 1440px;
-    margin: auto;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 1em;
     text-align: center;
+    padding: 2em;
+}
+
+.page-hero {
+    height: 40vh;
+    background-image: url(assets/IMG_0072-2.png);
+    background-repeat: no-repeat;
+    background-position: center; 
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: solid var(--text);
 }
 
 .button {
@@ -227,48 +251,52 @@ header {
 }
 
 
-.image-carousel {
-    height: 50vh;
+  .about-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+
+  .about-image {
+    width: 500px;
+    overflow: hidden;
+    border-radius: 1em;
+  }
+
+
+  .service-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+
+  .service-image {
+    width: 500px;
+    overflow: hidden;
+    border-radius: 1em;
+  }
+
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1em;
+    align-items: center;
+
 }
 
-.list {
-    display: flex;
-    list-style: none;
-    overflow-x: scroll;
-    scroll-snap-type: x mandatory;
-  }
+.card {
+    width: 350px;
+}
   
-  .item {
-    flex-shrink: 0;
-    height: 100%;
-    background-color: #FFF;
-    scroll-snap-align: center;
-  }
-  
-  .content {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 50vh;
-  }
-
-  .image-size {
-    height: 100%;
-  }
-
-  .list {
-    /* Hide scrollbar in Firefox */
-    scrollbar-width: none;
-  
-    /* Hide scrollbar in IE and Edge */
-    -ms-overflow-style: none;
-  }
-  
-  /* Hide scrollbar in webkit */
-  .list::-webkit-scrollbar {
-    display: none;
-  }
-
+.card-image {
+    width: 300px;
+    height: 200px;
+    overflow: hidden;
+    border-radius: 1em;
+}
 
 
   .cta-section {
