@@ -124,7 +124,7 @@ header {
     margin: auto;
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: end;
     text-align: center;
     padding: 0 50px 0 50px;
 
@@ -137,7 +137,9 @@ header {
 }
 
 .brand-label p {
-    font-size: var(--font-size-600);
+    font-size: var(--font-size-700);
+    padding-top: .4em;
+    margin: 0;
 }
 
 .logo-container {
@@ -153,10 +155,12 @@ header {
     font-weight: var(--font-weight-bold);
 }
 
+
 .navigation-list {
     list-style-type: none;
     display: flex;
     gap: 2em;
+
 }
 
 .navigation-list li a {
@@ -418,6 +422,14 @@ footer {
         box-shadow: 0 0 0.75em rgb(0,0,0,0.05);
         z-index: 999;
     }
+
+    .main-header {
+        align-items: center;
+        text-align: center;
+        justify-content: space-between;
+        padding: 0;
+    }
+
 
     /* .primary-navigation::before {
         content: "";
